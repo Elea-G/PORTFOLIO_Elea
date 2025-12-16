@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accueil - Mon Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       <header class="fixed-header">
+            <div class="header-container">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                        <li><a href="apropos.html" class="nav-link">À propos</a></li>
+                        <li><a href="campusErmitage.html" class="nav-link">Campus Ermitage</a></li>
+                        <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
+                        <li><a href="projets.html" class="nav-link">Projets</a></li>
+                        <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                        <li><a href="veille.html" class="nav-link">Veille</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="home-content">
+                        <h1 class="home-title">GUILMOT Eléa</h1>
+                        <p class="home-subtitle">Mon Portfolio</p>
+                        <div>
+                            <a href="apropos.html" class="btn">À propos</a>
+                            <a href="projets.html" class="btn">Voir mes projets</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Mon Portfolio. Tous droits réservés.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Navigation active state
+            document.addEventListener('DOMContentLoaded', function() {
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                // Handle navigation clicks
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        // Remove active class from all links
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        
+                        // Add active class to clicked link
+                        this.classList.add('active');
+                    });
+                });
+            }); 
+        </script>
+    </body>
+    </html>             

@@ -16,8 +16,8 @@
                     <li><a href="campusErmitage.html" class="nav-link">Campus Ermitage</a></li>
                     <li><a href="entreprise.html" class="nav-link">Entreprise</a></li>
                     <li><a href="projets.html" class="nav-link">Projets</a></li>
-                    <li><a href="competences.html" class="nav-link">Compétences</a></li>
                     <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="competences.html" class="nav-link">Compétences</a></li>
                     <li><a href="veille.html" class="nav-link active">Veille</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
@@ -30,13 +30,6 @@
             <div class="container">
                 <h2 class="section-title">Veille Technologique</h2>
                 <p class="section-subtitle">Sujet — L'Intelligence Artificielle Générative</p>
-
-                <!-- INTRODUCTION -->
-                <div class="veille-intro">
-                    <h3>Pourquoi ce sujet ?</h3>
-                    <p>L'intelligence artificielle générative (ChatGPT, Claude, Gemini, Copilot, Midjourney…) transforme en profondeur le monde de l'informatique et plus particulièrement le métier de développeur. En tant qu'étudiante en BTS SIO option SLAM, il me semble essentiel de comprendre ces outils, leurs capacités, leurs limites, ainsi que leur impact sur les pratiques professionnelles, le marché du travail et la société.</p>
-                    <p>Cette veille me permet de rester à jour sur une technologie qui évolue très rapidement et qui fait déjà partie de mon quotidien d'étudiante et de future développeuse.</p>
-                </div>
 
                 <!-- MÉTHODOLOGIE -->
                 <div class="veille-methodo">
@@ -55,72 +48,57 @@
                         <li><strong>Feedly</strong> — agrégateur de flux RSS pour centraliser toutes mes sources</li>
                         <li><strong>Google Alertes</strong> — sur les mots-clés « IA générative », « ChatGPT », « LLM », « Copilot »</li>
                         <li><strong>Newsletters</strong> — IA-Pulse, The Batch (deeplearning.ai)</li>
-                        <li><strong>LinkedIn</strong> — suivi de personnalités du domaine (Yann LeCun, Luc Julia, etc.)</li>
                     </ul>
-                    <p><strong>Fréquence :</strong> consultation quotidienne (15 à 20 minutes le matin) + synthèse hebdomadaire des articles les plus pertinents.</p>
                 </div>
 
                 <h3 class="section-heading">Articles sélectionnés</h3>
                 <script>
                     const articles = [
                         {
-                            titre: "GPT-5 : OpenAI dévoile son nouveau modèle phare",
-                            source: "OpenAI",
-                            date: "Août 2025",
-                            resume: "OpenAI a lancé GPT-5, présenté comme un modèle unifié plus performant en raisonnement, en codage et en compréhension de longs contextes. Le modèle est intégré progressivement à ChatGPT et à l'API.",
-                            analyse: "Cette sortie marque une étape importante : les modèles deviennent capables de gérer des tâches longues et complexes (analyse de code entier, documents volumineux). Pour un développeur, cela change la façon de travailler au quotidien.",
-                            lien: "https://openai.com/index/introducing-gpt-5/"
+                            titre: "En 2026, l'IA générative passe à la vitesse supérieure",
+                            source: "Futura Sciences",
+                            date: "Décembre 2025",
+                            resume: "Selon l'étude IDC, 60 % des entreprises mondiales disposeront de plateformes internes d'IA générative en 2026, contre seulement 18 % deux ans plus tôt. L'ère du test-and-learn laisse place à un déploiement massif.",
+                            analyse: "Cette industrialisation massive signifie que les développeurs vont devoir maîtriser l'intégration d'IA dans les applications métier. C'est une compétence qui va devenir incontournable en SLAM.",
+                            lien: "https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-preparez-vous-2026-ia-generative-passe-vitesse-superieure-128480/"
+                        },
+                        {
+                            titre: "La France leader européen de l'adoption de l'IA",
+                            source: "Orange",
+                            date: "Mai 2026",
+                            resume: "Selon le Microsoft AI Diffusion Report, la France (44 %) devance largement les États-Unis (28,3 %) et la Chine (16,3 %) en adoption d'IA générative. 59 % des entreprises l'utilisent pour le résumé de contenus.",
+                            analyse: "C'est encourageant pour le marché français de l'emploi tech. Cela signifie que les compétences en IA générative seront recherchées par les entreprises françaises.",
+                            lien: "https://www.orange.com/fr/whats-up/intelligence-artificielle-en-entreprise-productivite-et-gouvernance-en-2026"
+                        },
+                        {
+                            titre: "L'IA agentique : la nouvelle révolution ?",
+                            source: "Unow",
+                            date: "Mars 2026",
+                            resume: "Au-delà des copilotes, les agents IA capables d'agir de manière autonome pour atteindre un objectif sont en pleine montée en puissance. Mais dans la réalité des entreprises, la transition est plus progressive qu'annoncée.",
+                            analyse: "On passe d'un assistant qui répond à un système qui agit. Pour un développeur, cela soulève de vraies questions : comment encadrer ces agents, garantir leur fiabilité, et gérer les risques de dérives ?",
+                            lien: "https://www.unow.fr/blog/le-coin-des-experts/adoption-ia-entreprise-tendances-2026/"
+                        },
+                        {
+                            titre: "Guide comparatif des outils d'IA générative en 2026",
+                            source: "YoungData",
+                            date: "Mars 2026",
+                            resume: "ChatGPT, Claude, Gemini, Copilot, Mistral : cinq acteurs se partagent 90 % du marché des assistants texte en 2026. Le guide compare leurs spécificités, tarifs et cas d'usage selon les environnements d'entreprise.",
+                            analyse: "Il n'existe pas le meilleur outil IA, mais celui qui s'intègre le mieux dans l'environnement existant.",
+                            lien: "https://www.youngdata.io/blog/guide-comparatif-ia-generative-2026"
                         },
                         {
                             titre: "L'IA Act européen entre en application",
                             source: "Commission Européenne",
-                            date: "Août 2024 – 2026",
+                            date: "2024 – 2026",
                             resume: "Le règlement européen sur l'intelligence artificielle (AI Act) est entré progressivement en vigueur. Il classe les systèmes d'IA selon leur niveau de risque et impose des obligations strictes aux modèles génératifs.",
-                            analyse: "C'est le premier cadre juridique mondial sur l'IA. Pour les entreprises qui développent ou intègrent de l'IA, cela impose une mise en conformité et de la transparence sur les données d'entraînement.",
+                            analyse: "Premier cadre juridique mondial sur l'IA. Pour les entreprises qui développent ou intègrent de l'IA, cela impose une mise en conformité et de la transparence sur les données d'entraînement.",
                             lien: "https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai"
-                        },
-                        {
-                            titre: "GitHub Copilot et l'évolution du métier de développeur",
-                            source: "GitHub Blog",
-                            date: "2025",
-                            resume: "GitHub Copilot, basé sur les modèles d'OpenAI et Anthropic, est désormais utilisé par des millions de développeurs. Il suggère du code, complète des fonctions, et peut même générer des tests unitaires automatiquement.",
-                            analyse: "L'outil ne remplace pas le développeur mais transforme son rôle : moins de temps sur la syntaxe, plus de temps sur la conception et la résolution de problèmes. C'est exactement ce qui m'intéresse en SLAM.",
-                            lien: "https://github.com/features/copilot"
-                        },
-                        {
-                            titre: "Mistral AI : la pépite française de l'IA",
-                            source: "Mistral AI",
-                            date: "2024-2025",
-                            resume: "Mistral AI, start-up française fondée en 2023, propose des modèles open-source compétitifs face aux géants américains. L'entreprise est devenue la première licorne française de l'IA.",
-                            analyse: "Mistral montre que l'Europe peut exister sur le marché de l'IA face aux États-Unis et à la Chine. Leurs modèles open-source sont particulièrement intéressants pour les entreprises soucieuses de souveraineté.",
-                            lien: "https://mistral.ai/"
-                        },
-                        {
-                            titre: "Les hallucinations des IA : un défi toujours d'actualité",
-                            source: "Le Monde Informatique",
-                            date: "2025",
-                            resume: "Malgré les progrès, les IA génératives continuent de produire des informations inventées (hallucinations). Plusieurs études récentes montrent que ce phénomène reste un frein majeur à l'adoption en entreprise.",
-                            analyse: "C'est un point crucial : utiliser une IA ne dispense pas de vérifier ses sorties. Dans un contexte professionnel, une erreur peut coûter cher au client.",
-                            lien: "https://www.lemondeinformatique.fr/"
                         }
                     ];
                 </script>
 
                 <div class="veille-container" id="veille-container">
-                    <!-- Les articles sont générés automatiquement ici -->
-                </div>
-
-                <!-- SYNTHÈSE -->
-                <div class="veille-intro" style="margin-top: 3rem;">
-                    <h3>Synthèse personnelle</h3>
-                    <p>L'IA générative est en train de redéfinir le métier de développeur. Plutôt que de remplacer les humains, elle devient un assistant qui automatise les tâches répétitives et libère du temps pour la réflexion et la conception.</p>
-                    <p>Pour une future professionnelle du SLAM, il me semble essentiel de :</p>
-                    <ul>
-                        <li><strong>Apprendre à utiliser ces outils</strong> efficacement (prompt engineering)</li>
-                        <li><strong>Garder un esprit critique</strong> face aux résultats produits (hallucinations, biais)</li>
-                        <li><strong>Comprendre les enjeux éthiques et juridiques</strong> (RGPD, AI Act, droits d'auteur)</li>
-                        <li><strong>Rester en veille permanente</strong> car le domaine évolue très vite</li>
-                    </ul>
+                    <!-- Les articles sont générés automatiquement -->
                 </div>
 
                 <p style="text-align: center; margin-top: 2.5rem; color: var(--text-light); font-size: 0.88rem; font-style: italic;">Dernière mise à jour : Mai 2026</p>

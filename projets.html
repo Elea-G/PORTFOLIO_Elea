@@ -73,8 +73,9 @@
                             description: "Site déployé sur Github Pages.",
                             image: "images/SITE VITRINE.png",
                             tags: ["HTML", "CSS", "JavaScript", "PHP"],
-                            lienProjet: "#",
+                            lienProjet: "documents/CAHIER DES CHARGES_SITE VITRINE.pdf",
                             lienCode: "https://github.com/Campus-Ermitage/PROJET-SITE-VITRINE/tree/main/09012025_CODE_SITE%20VITRINE_Elea%20Guilmot",
+                            codePrive: true,
                             ouvrirNouvelOnglet: true
                         }
                     ];
@@ -128,9 +129,14 @@
                 : '';
 
             // Lien "→ Voir le code" (uniquement si lienCode existe et n'est pas "#")
-            const codeLink = projet.lienCode && projet.lienCode !== '#'
-                ? `<a href="${projet.lienCode}" class="project-code-link" ${targetAttr}>→ Voir le code</a>`
-                : '';
+            let codeLink = '';
+            if (projet.lienCode && projet.lienCode !== '#') {
+                if (projet.codePrive) {
+                    codeLink = `<span class="project-code-private">Code privé (projet scolaire en cours)</span>`;
+                } else {
+                    codeLink = `<a href="${projet.lienCode}" class="project-code-link" ${targetAttr}>→ Voir le code</a>`;
+                }
+            }
 
             const card = `
                 <div class="project-card">

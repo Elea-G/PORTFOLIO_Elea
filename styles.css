@@ -490,6 +490,14 @@ p {
     color: var(--accent-color);
     transform: translateX(4px);
 }
+
+.project-code-private {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    font-style: italic;
+    font-weight: 400;
+}
+
 /* ============================================
    CERTIFICATIONS
    ============================================ */

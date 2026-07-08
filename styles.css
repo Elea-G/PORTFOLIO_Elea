@@ -498,6 +498,22 @@ p {
     font-weight: 400;
 }
 
+.section-heading {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.empty-projects {
+    text-align: center;
+    color: var(--text-light);
+    font-style: italic;
+    padding: 3rem;
+    background: var(--light-color);
+    border-radius: 12px;
+    border: 1px dashed var(--border-color);
+}
+
 /* ============================================
    CERTIFICATIONS
    ============================================ */
@@ -1014,6 +1030,40 @@ button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     transform: none;
+}
+
+/* ============================================
+   CASE RGPD
+   ============================================ */
+
+.checkbox-group {
+    margin: 1.5rem 0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin: 3px 0 0;
+    accent-color: var(--secondary-color);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-label span {
+    flex: 1;
 }
 
 /* ============================================

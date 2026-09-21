@@ -1,0 +1,117 @@
+/* ============================================
+   PAGE : COMPÉTENCES (competences.html)
+   ============================================ */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    text-align: center;
+    border: 1px solid var(--border-strong);
+    border-top: 3px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.skill-card:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-icon {
+    font-size: 0.78rem;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: var(--light-color);
+    border-radius: 12px;
+}
+
+.skill-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.skill-description {
+    color: var(--text-light);
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Bouton « fiche E5 » */
+.button-26 {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.95rem 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    margin: 3rem auto 0;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-sans);
+}
+
+.button-26:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+/* Animations échelonnées pour les cartes */
+.skill-card:nth-child(1) { animation-delay: 0.05s; }
+.skill-card:nth-child(2) { animation-delay: 0.15s; }
+.skill-card:nth-child(3) { animation-delay: 0.25s; }
+.skill-card:nth-child(4) { animation-delay: 0.35s; }
+.skill-card:nth-child(5) { animation-delay: 0.45s; }
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}

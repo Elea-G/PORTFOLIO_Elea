@@ -1,0 +1,412 @@
+/* ============================================
+   STYLES COMMUNS
+   Variables, en-tête, navigation, titres, boutons, pied de page.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #b8956a;
+    --accent-color: #8b7355;
+    --light-color: #faf7f2;
+    --beige-color: #f5f0e6;
+    --dark-beige: #e8e0d0;
+    --text-color: #2c2c2c;
+    --text-light: #6b6b6b;
+    --bg-color: #ffffff;
+    --border-color: #e8e4dd;
+    --border-strong: #d9ccb4;     /* bordure plus marquée des cartes */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.fixed-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color);
+    padding: 1.2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 0.3rem;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: var(--transition);
+    font-weight: 400;
+    font-size: 0.92rem;
+    letter-spacing: 0.3px;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: var(--beige-color);
+    color: var(--primary-color);
+}
+
+nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Bouton burger et nom du site : visibles uniquement sur tablettes et téléphones */
+.nav-toggle,
+.nav-brand {
+    display: none;
+}
+
+/* ============================================
+   MAIN & SECTIONS
+   ============================================ */
+main {
+    min-height: calc(100vh - 100px);
+}
+
+.main-with-fixed-header {
+    margin-top: 80px;
+    padding: 3rem 0;
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    padding: 2rem 0;
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.3px;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.85rem 1.8rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.92rem;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    cursor: pointer;
+    font-family: var(--font-sans);
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: var(--primary-color);
+    color: var(--beige-color);
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: var(--beige-color);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 240, 230, 0.35);
+    background-color: transparent;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+footer p {
+    color: var(--dark-beige);
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.footer-links a {
+    color: var(--beige-color);
+    font-size: 0.88rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablettes et téléphones : menu burger */
+@media (max-width: 1024px) {
+    .fixed-header {
+        padding: 0.6rem 0;
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .nav-brand {
+        display: inline-block;
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: -0.3px;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background-color: transparent;
+        border: 1px solid var(--border-strong);
+        border-radius: 12px;
+        cursor: pointer;
+        transform: none;
+    }
+
+    .nav-toggle:hover {
+        background-color: var(--beige-color);
+        transform: none;
+    }
+
+    .nav-toggle:focus-visible {
+        outline: 2px solid var(--secondary-color);
+        outline-offset: 2px;
+    }
+
+    .nav-toggle-bar {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    /* Le burger devient une croix quand le menu est ouvert */
+    .nav-open .nav-toggle-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-open .nav-toggle-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-open .nav-toggle-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Panneau du menu : fermé par défaut, déplié sous la barre du haut */
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: max-height 0.35s ease, visibility 0s linear 0.35s;
+    }
+
+    .nav-open nav {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        visibility: visible;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-md);
+        transition: max-height 0.35s ease, visibility 0s;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 20px 20px;
+    }
+
+    nav a {
+        display: block;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Petits écrans : pied de page empilé */
+@media (max-width: 600px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6rem;
+    }
+}

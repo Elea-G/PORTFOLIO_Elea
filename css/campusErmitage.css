@@ -1,0 +1,76 @@
+/* ============================================
+   PAGE : CAMPUS ERMITAGE (campusErmitage.html)
+   ============================================ */
+
+#about {
+    padding: 2rem 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.about-content h3 {
+    font-family: var(--font-serif);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.about-content h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 70%;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.about-content ul {
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+}
+
+.about-content ul li {
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.logo-campus {
+    display: block;
+    margin: 0 auto 2rem auto;
+    border-radius: 8px;
+}
+
+.link-list {
+    margin-top: 1.5rem;
+}
+
+.link-list a {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 1.5rem;
+    transition: var(--transition);
+}
+
+.link-list a:hover {
+    color: var(--accent-color);
+    transform: translateX(4px);
+}

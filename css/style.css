@@ -379,13 +379,10 @@ h2 em, h1 em { font-style: italic; color: var(--gold-ink); }
 
 /* Un peu plus de peps : halo, bulles, bandeau, dégradé */
 .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(460px circle at var(--mx, 72%) var(--my, 30%), rgba(184, 149, 106, .26), transparent 70%); pointer-events: none; }
-.hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); pointer-events: none; animation: float 9s ease-in-out infinite; }
-.blob-1 { top: 8%; right: 6%; width: 340px; height: 340px; background: rgba(224, 196, 154, .55); }
-.blob-2 { bottom: 4%; left: 4%; width: 280px; height: 280px; background: rgba(184, 149, 106, .22); animation-delay: -4s; }
 .gradient-text { background: linear-gradient(100deg, var(--gold-ink) 0%, var(--gold) 55%, var(--gold-light) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
 .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(184, 149, 106, .5); }
 
-.marquee { overflow: hidden; padding: 1.05rem 0; background: var(--ink); border-top: 1px solid rgba(224, 196, 154, .25); border-bottom: 1px solid rgba(224, 196, 154, .25); }
+.marquee { overflow: hidden; margin: 0 0 3rem; padding: 1rem 0; border-top: 1px solid rgba(224, 196, 154, .25); border-bottom: 1px solid rgba(224, 196, 154, .25); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 .marquee-track span { display: inline-flex; align-items: center; padding: 0 1.6rem; font-family: var(--serif); font-size: 1.15rem; letter-spacing: .04em; color: var(--gold-light); white-space: nowrap; }

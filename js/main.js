@@ -254,14 +254,20 @@
             '</ul></div>' +
             '<div><h3>Ma démarche</h3><p>' + esc(v.demarche) + '</p></div>';
 
-        $('#veille-grid').innerHTML = v.articles.map(function (a) {
-            return '<article class="veille-card reveal">' +
-                '<p class="veille-source">' + esc(a.source) + '<time>Publié : ' + esc(a.date) + '</time></p>' +
-                '<h4>' + esc(a.titre) + '</h4>' +
-                '<p><strong>Résumé.</strong> ' + esc(a.resume) + '</p>' +
-                '<p class="veille-analyse"><strong>Mon analyse.</strong> ' + esc(a.analyse) + '</p>' +
-                '<a class="text-link" href="' + esc(a.lien) + '" target="_blank" rel="noopener noreferrer">Lire l’article →</a>' +
-            '</article>';
+        $('#veille-grid').innerHTML = v.articles.map(function (a, i) {
+            return '<li class="veille-item reveal">' +
+                '<details' + (i === 0 ? ' open' : '') + '>' +
+                    '<summary>' +
+                        '<time class="veille-date">' + esc(a.date) + '</time>' +
+                        '<span class="veille-titre"><span class="veille-src">' + esc(a.source) + '</span>' + esc(a.titre) + '</span>' +
+                    '</summary>' +
+                    '<div class="veille-detail">' +
+                        '<p><strong>Résumé.</strong> ' + esc(a.resume) + '</p>' +
+                        '<p class="veille-analyse"><strong>Mon analyse.</strong> ' + esc(a.analyse) + '</p>' +
+                        '<a class="text-link" href="' + esc(a.lien) + '" target="_blank" rel="noopener noreferrer">Lire l’article →</a>' +
+                    '</div>' +
+                '</details>' +
+            '</li>';
         }).join('');
 
         $('#veille-update').textContent = 'Dernière mise à jour : ' + v.misAJour;

@@ -72,16 +72,6 @@ window.PORTFOLIO = {
             categorie: 'ERP & logique applicative',
             description: 'Création de configurateurs basés sur des scénarios de questions et l’application de formules.',
             items: ['ERP', 'Configurateurs', 'Modélisation de processus métiers']
-        },
-        {
-            categorie: 'Outils & versionnage',
-            description: 'Dépôt de code, sauvegarde et mise en ligne.',
-            items: ['Git', 'GitHub', 'GitHub Pages']
-        },
-        {
-            categorie: 'Sécurité & conformité',
-            description: 'Formations suivies auprès de l’ANSSI et de la CNIL.',
-            items: ['Cybersécurité', 'EBIOS Risk Manager', 'RGPD']
         }
     ],
 
@@ -209,19 +199,20 @@ window.PORTFOLIO = {
         }
     ],
 
-    veille: {
-        sujet: 'L’Intelligence Artificielle Générative',
+        veille: {
+        sujet: 'La cybersécurité et l’actualité informatique',
         misAJour: 'Novembre 2026',
         outils: [
             { nom: 'Feedly', texte: 'regroupe dans un seul flux RSS les sites que je suis' },
-            { nom: 'Google Alertes', texte: 'sur les mots-clés « IA générative », « LLM », « Copilot » et « AI Act »' },
+            { nom: 'Google Alertes', texte: 'sur les mots-clés « cyberattaque », « rançongiciel », « RGPD » et « NIS 2 »' },
             { nom: 'Newsletters', texte: 'des sites d’actualité informatique' }
         ],
         sources: [
             { nom: 'Solutions Numériques', lien: 'https://www.solutions-numeriques.com/' },
+            { nom: 'IT-Connect', lien: 'https://www.it-connect.fr/' },
             { nom: 'Blog du Modérateur', lien: 'https://www.blogdumoderateur.com/' },
-            { nom: 'Banque de France', lien: 'https://www.banque-france.fr/' },
-            { nom: 'Blog d’Anthropic', lien: 'https://www.anthropic.com/news' }
+            { nom: 'CNIL', lien: 'https://www.cnil.fr/' },
+            { nom: 'ANSSI', lien: 'https://cyber.gouv.fr/' }
         ],
         demarche: 'Chaque semaine, je collecte les nouveautés, je garde les articles récents issus de sources fiables, puis je rédige un résumé et une analyse personnelle.',
         articles: [
@@ -242,36 +233,36 @@ window.PORTFOLIO = {
                 lien: 'https://www.blogdumoderateur.com/ovhcloud-llm-olala-petit-modele-ouvert/'
             },
             {
-                titre: 'AVIS D’EXPERT – Comment l’IA agentique redéfinit la valeur des logiciels métiers',
+                titre: 'NIS2 : la loi Résilience avance à l’Assemblée, mais les entreprises devront encore patienter',
                 source: 'Solutions Numériques & Cybersécurité',
-                date: '16 novembre 2026',
-                resume: 'Avec l’IA agentique, les utilisateurs accèdent aux données de leurs logiciels métiers via un agent, sans passer par l’interface, ce qui oblige les éditeurs à ouvrir leurs applications (par exemple avec un serveur MCP). L’auteur estime que leur valeur reste dans la qualité des données, les règles de gestion et le contrôle des accès.',
-                analyse: 'Cela rejoint mon travail : dans un ERP ou dans WebTask, ce sont les règles de gestion et les droits d’accès par rôle qui rendent l’outil fiable.',
-                lien: 'https://www.solutions-numeriques.com/avis-dexpert-comment-lia-agentique-redefinit-la-valeur-des-logiciels-metiers/'
+                date: '13 novembre 2026',
+                resume: 'Les députés ont examiné le projet de loi Résilience, qui transpose la directive européenne NIS 2. Ils ont supprimé l’article 16 bis sur le chiffrement (69 voix contre 37) et ajouté pour les collectivités un plan de mise en conformité à présenter sous trois mois, avec l’appui de l’ANSSI. Le vote solennel était prévu le 17 novembre ; il restera ensuite à accorder les textes de l’Assemblée et du Sénat, puis à promulguer la loi.',
+                analyse: 'La sécurité devient une obligation légale et plus seulement une bonne pratique : je dois la prévoir dès la conception d’une application (droits d’accès, mises à jour, journalisation).',
+                lien: 'https://www.solutions-numeriques.com/nis2-la-loi-resilience-avance-a-lassemblee-mais-les-entreprises-devront-encore-patienter/'
             },
             {
-                titre: 'Donating Agent Skills to the Agentic AI Foundation',
-                source: 'Anthropic (source primaire, en anglais)',
-                date: '22 octobre 2026',
-                resume: 'Anthropic donne le standard ouvert Agent Skills à l’Agentic AI Foundation, hébergée par la Linux Foundation. Un « skill » est un dossier avec un fichier SKILL.md qui apprend une procédure à un agent IA. Plus de 70 plateformes l’ont déjà intégré depuis décembre 2025.',
-                analyse: 'Un standard ouvert et neutre limite la dépendance à un fournisseur : c’est un critère à prendre en compte pour choisir un outil d’IA dans une application métier.',
-                lien: 'https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation'
+                titre: 'Maersk confirme une fuite de données revendiquée par le groupe de ransomware WhiteArmor',
+                source: 'IT-Connect',
+                date: '12 novembre 2026',
+                resume: 'Maersk a reconnu le 11 novembre un accès non autorisé et une fuite de données sur un ancien système hérité d’un rachat. Le groupe WhiteArmor réclame 5 millions de dollars en bitcoins sous 30 jours, sans avoir chiffré de données à ce stade. Ses affirmations (environ 100 Go, comptes administrateurs) ne sont pas vérifiées, et Maersk indique que l’incident semble isolé.',
+                analyse: 'Un ancien système oublié peut devenir une porte d’entrée : il faut inventorier et mettre à jour tous les systèmes, y compris ceux hérités. Il faut aussi garder du recul face aux revendications des attaquants, qui ne sont pas toujours vérifiées.',
+                lien: 'https://www.it-connect.fr/maersk-fuite-de-donnees-whitearmor/'
             },
             {
-                titre: 'L’IA s’installe dans les entreprises françaises : une diffusion rapide, mais des gains de productivité encore limités',
-                source: 'Banque de France — Bulletin n° 266',
-                date: '3 septembre 2026',
-                resume: 'Début 2026, 67 % des entreprises françaises de 20 salariés ou plus utilisent l’IA générative, surtout pour des usages simples. Les gains de productivité restent limités pour l’instant.',
-                analyse: 'L’enjeu est d’intégrer l’IA dans les logiciels métiers, ce qui correspond à la spécialité SLAM et à mon travail chez PAGOS.',
-                lien: 'https://www.banque-france.fr/fr/publications-et-statistiques/publications/lia-sinstalle-dans-les-entreprises-francaises-une-diffusion-rapide-mais-des-gains-de-productivite'
+                titre: 'Cybersécurité des collectivités territoriales : la CNIL prononce dix sanctions',
+                source: 'CNIL',
+                date: '9 novembre 2026',
+                resume: 'La CNIL a sanctionné dix collectivités et un établissement public (de 3 000 € à 20 000 €) pour des manquements à la sécurité des données : pas d’authentification multifacteur pour les administrateurs, accès permanents laissés aux prestataires, journaux peu exploités, systèmes obsolètes non corrigés et mots de passe trop faibles.',
+                analyse: 'Ces manquements sont des règles de base que je peux appliquer dans mes développements : mots de passe protégés, droits d’accès par rôle, mises à jour régulières et suivi des connexions.',
+                lien: 'https://cnil.fr/fr/node/169128'
             },
             {
-                titre: 'IA Act : ce qui change le 2 août 2026',
-                source: 'Blog du Modérateur',
-                date: '29 juillet 2026',
-                resume: 'Le « Digital Omnibus » reporte les obligations des systèmes à haut risque à décembre 2027 (août 2028 pour certains). Les règles de transparence (chatbots, contenus générés par IA) s’appliquent bien depuis le 2 août 2026.',
-                analyse: 'Si j’intègre un chatbot dans une application, je devrai indiquer qu’il s’agit d’une IA, comme je le fais pour le RGPD dans mon formulaire de contact.',
-                lien: 'https://www.blogdumoderateur.com/ia-act-2-aout-2026/'
+                titre: 'Panorama de la cybermenace 2025',
+                source: 'ANSSI',
+                date: '11 mars 2026',
+                resume: 'En 2025, l’ANSSI a traité 3 586 événements de sécurité, soit 18 % de moins qu’en 2024 (année des Jeux olympiques). L’éducation et la recherche sont les plus visées (34 %), devant les ministères et collectivités (24 %), la santé (10 %) et les télécoms (9 %). Seulement 42 % des possibles fuites de données ont été confirmées, et les équipements de bordure restent une cible privilégiée.',
+                analyse: 'Aucun secteur n’est épargné, pas seulement les grandes entreprises. La gestion des vulnérabilités, c’est-à-dire appliquer les correctifs, revient comme priorité.',
+                lien: 'https://cyber.gouv.fr/actualites/panorama-de-la-cybermenace-2025/'
             }
         ]
     }
